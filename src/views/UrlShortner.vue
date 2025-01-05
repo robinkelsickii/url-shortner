@@ -1,13 +1,13 @@
 <template>
-  <div id="app">
+  <div>
     <UrlInput />
   </div>
 </template>
 
-<script setup>
+<script>
 import UrlInput from '@/components/UrlInput.vue'
 </script>
 
-<style>
-/* Add your global styles if necessary */
+<style scoped>
+/* Add your styles here */
 </style>
