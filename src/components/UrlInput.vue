@@ -15,6 +15,8 @@
     <div v-if="shortenedUrl">
       <p>Shortened Url</p>
       <a :href="shortenedUrl" target="_blank">{{ shortenedUrl }}</a>
+
+      <button @click="copyToClipboard" :disabled="!shortenedUrl">Copy to Clipboard</button>
     </div>
 
     <div v-if="err" class="error">
@@ -48,6 +50,17 @@ const shortenUrl = async () => {
     console.error(error)
     err.value = 'An error occurred while shortening the URL. Please try again.'
   }
+}
+
+const copyToClipboard = () => {
+  navigator.clipboard
+    .writeText(shortenedUrl.value)
+    .then(() => {
+      alert('Copied to clipboard')
+    })
+    .catch((err) => {
+      alert('Failed to copy to clipboard', err)
+    })
 }
 
 const clearShortenedUrl = () => {
