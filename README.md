@@ -19,7 +19,7 @@ This project allows users to input a long URL and generate a shortened version u
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/url-shortener.git
+   git clone https://github.com/robinkelsickii/url-shortener.git
    ```
 
 2. Navigate into the project directory:
